@@ -281,9 +281,7 @@ ul {
 }
 
 .b-red {
-
-  background-attachment: fixed;
-  margin-top: -2px;
+  background-color: black;
 }
 
 .b-green {
