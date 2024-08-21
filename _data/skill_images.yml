@@ -1,4 +1,3 @@
-# _data/skill_images.yml
 Flutter: flutter
 Python: python
 HTML: html
@@ -9,6 +8,6 @@ Git: git
 Golang: golang
 'Microsoft Power Automate': microsoft-power-automate
 'AI Integrations': ai-integrations
-'Google API's':google-apis
+'Google API''s': google-apis
 Supabase: supabase
 Firebase: firebase
