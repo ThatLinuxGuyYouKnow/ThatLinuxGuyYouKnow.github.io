@@ -8,3 +8,7 @@ Git: git
 'Node.js': nodejs
 Golang: golang
 'Microsoft Power Automate': microsoft-power-automate
+'AI Integrations': ai-integrations
+'Google API's':google-apis
+Supabase: supabase
+Firebase: firebase

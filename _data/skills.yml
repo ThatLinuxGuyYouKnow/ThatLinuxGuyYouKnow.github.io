@@ -8,3 +8,8 @@
 - name: Node.js
 - name: Golang
 - name: Microsoft Power Automate
+- name: AI Integrations
+- name: Google API's
+- name: Supabase
+- name: Firebase
+- name: Google Cloud Compute
