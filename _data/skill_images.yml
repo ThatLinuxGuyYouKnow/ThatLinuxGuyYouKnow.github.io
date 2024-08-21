@@ -1,7 +1,6 @@
 Flutter: flutter
 Python: python
 HTML: html
-CSS: css
 JavaScript: javascript
 Git: git
 'Node.js': nodejs
@@ -11,3 +10,4 @@ Golang: golang
 'Google API''s': google-apis
 Supabase: supabase
 Firebase: firebase
+'Google Cloud': google-compute

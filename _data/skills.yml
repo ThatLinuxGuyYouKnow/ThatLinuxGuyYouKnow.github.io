@@ -2,8 +2,6 @@
 - name: Flutter
 - name: Python
 - name: HTML
-- name: CSS
-- name: JavaScript
 - name: Git
 - name: Node.js
 - name: Golang
@@ -12,4 +10,4 @@
 - name: Google API's
 - name: Supabase
 - name: Firebase
-- name: Google Cloud Compute
+- name: Google Cloud
