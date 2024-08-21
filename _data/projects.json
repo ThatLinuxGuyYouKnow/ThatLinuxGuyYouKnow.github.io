@@ -1,11 +1,14 @@
 [
     {
-        "name": "covid19-philippines ",
-        "description": "A simple coronavirus tracker app for Philippines.",
+        "name": "GoBin ",
+        "description": "An AI powered waste disposal advisor.",
         "thumbnail": "project-covid-19-tracker-philippines.webp",
         "url": "https://covid19-philippines.netlify.app/",
         "repo": "https://github.com/jayveepvalenzuela/covid19-philippines",
-        "tech": ["Pug", "Sass", "JavaScript", "Gulp"]
+        "tech": [
+            "Flutter",
+            "Google Maps"
+        ]
     },
     {
         "name": "jayveepvalenzuela.github.io",
@@ -13,14 +16,24 @@
         "thumbnail": "project-jayveepvalenzuela-github-io.webp",
         "url": "https://jayveepvalenzuela.github.io/",
         "repo": "https://github.com/jayveepvalenzuela/jayveepvalenzuela.github.io",
-        "tech": ["Jekyll", "HTML", "Sass", "JavaScript", "GSAP"]
+        "tech": [
+            "Jekyll",
+            "HTML",
+            "Sass",
+            "JavaScript",
+            "GSAP"
+        ]
     },
     {
-        "name": "pokedex",
-        "description": "Pokédex app built with React.",
+        "name": "Whatsapp Automata",
+        "description": "A robust Selenium based Whatsapp Automation Agent.",
         "thumbnail": "project-pokedex.webp",
         "url": "https://pokedex-yellow.vercel.app/",
         "repo": "https://github.com/jayveepvalenzuela/pokedex",
-        "tech": ["React", "TailwindCSS", "PokéAPI"]
+        "tech": [
+            "Python",
+            "Flask",
+            "Celery"
+        ]
     }
 ]

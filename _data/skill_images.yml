@@ -1,10 +1,10 @@
 # _data/skill_images.yml
-flutter: flutter
-python: python
-html: html
-css: css
-javascript: javascript
-git: git
-'node-js': nodejs
-golang: golang
-'microsoft-power-automate': microsoft-power-automate
+Flutter: flutter
+Python: python
+HTML: html
+CSS: css
+JavaScript: javascript
+Git: git
+'Node.js': nodejs
+Golang: golang
+'Microsoft Power Automate': microsoft-power-automate
