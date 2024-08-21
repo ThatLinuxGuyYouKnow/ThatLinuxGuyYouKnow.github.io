@@ -5,16 +5,16 @@
         </div>
         <div class="about__content">
             <h1 class="about__intro">Hello there, my name is {{ site.author }}.</h1>
-            <p>I'm a <strong>software engineer</strong>
+            <p>I'm a <strong>software engineer</strong></p>
             <p>I've been writing scripts and building apps since 2015 and have worked on many open source projects and
-                paid work for<a class="has-line cursor-animate" href="{{ site.links.linkedin }}" target="_blank"
+                paid work for <a class="has-line cursor-animate" href="{{ site.links.linkedin }}" target="_blank"
                     rel="noreferrer noopener">companies and digital agencies</a>.</p>
             <section class="about__skills">
                 <h2 class="section-title">Skills</h2>
                 <ul class="about__skills-list">
                     {% assign skills = site.data.skills | sort: 'name' %}
                     {% for skill in skills %}
-                    {% assign skill_image = site.data.skill_images[skill.name | replace: ' ', '-' | downcase] %}
+                    {% assign skill_image = site.data.skill_images[skill.name] %}
                     <li>
                         <img class="lazy invert" src="/assets/img/logo-{{ skill_image }}.webp" width="30" height="30"
                             alt="{{ skill.name }} logo" loading="lazy">

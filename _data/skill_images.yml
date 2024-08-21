@@ -5,6 +5,6 @@ html: html
 css: css
 javascript: javascript
 git: git
-Node.js: nodejs
+'node-js': nodejs
 golang: golang
-microsoft-power-automate: microsoft-power-automate
+'microsoft-power-automate': microsoft-power-automate
