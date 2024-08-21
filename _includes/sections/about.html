@@ -15,8 +15,9 @@
                     {% assign skills = site.data.skills | sort: 'name' %}
                     {% for skill in skills %}
                     <li>
-                        <img class="lazy invert" src="/assets/img/logo-{{ skill.name | downcase | remove: '.' }}.webp"
-                            width="30" height="30" alt="{{ skill.name }} logo" loading="lazy">
+                        <img class="lazy invert"
+                            src="/assets/img/logo-{{ skill.name | replace: ' ', '-' | downcase }}.webp" width="30"
+                            height="30" alt="{{ skill.name }} logo" loading="lazy">
                         {{ skill.name }}
                     </li>
                     {% endfor %}
