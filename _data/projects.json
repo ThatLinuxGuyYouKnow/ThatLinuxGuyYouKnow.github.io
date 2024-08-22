@@ -4,24 +4,24 @@
         "description": "An AI powered waste disposal advisor.",
         "thumbnail": "gobin-preview.webp",
         "url": "https://covid19-philippines.netlify.app/",
-        "repo": "https://github.com/jayveepvalenzuela/covid19-philippines",
+        "repo": "https://github.com/ThatLinuxGuyYouKnow/gobin",
         "tech": [
             "Flutter",
-            "Google Maps"
+            "Google Maps",
+            "AI (Gemini)"
         ]
     },
     {
-        "name": "jayveepvalenzuela.github.io",
-        "description": "My portfolio website built with Jekyll. Animations are handled with GSAP and CSS.",
+        "name": "ThatLinuxGuyYouKnow.github.io",
+        "description": "My portfolio website.",
         "thumbnail": "project-jayveepvalenzuela-github-io.webp",
-        "url": "https://jayveepvalenzuela.github.io/",
-        "repo": "https://github.com/jayveepvalenzuela/jayveepvalenzuela.github.io",
+        "url": "https://thatlinuxguyyouknow.github.io/",
+        "repo": "https://github.com/ThatLinuxGuyYouKnow/thatlinuxguyyouknow.io",
         "tech": [
             "Jekyll",
             "HTML",
             "Sass",
-            "JavaScript",
-            "GSAP"
+            "JavaScript"
         ]
     },
     {
