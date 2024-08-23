@@ -27,7 +27,7 @@
     {
         "name": "Whatsapp Automata",
         "description": "A robust Selenium based Whatsapp Automation Agent.",
-        "thumbnail": "project-pokedex.webp",
+        "thumbnail": "project-whatsapp.webp",
         "url": "https://pokedex-yellow.vercel.app/",
         "repo": "https://github.com/jayveepvalenzuela/pokedex",
         "tech": [
