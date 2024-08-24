@@ -3,7 +3,7 @@
         "name": "GoBin ",
         "description": "An AI powered waste disposal advisor.",
         "thumbnail": "gobin-preview.webp",
-        "url": "https://covid19-philippines.netlify.app/",
+        "url": "https://github.com/ThatLinuxGuyYouKnow/gobin",
         "repo": "https://github.com/ThatLinuxGuyYouKnow/gobin",
         "tech": [
             "Flutter",
@@ -34,6 +34,15 @@
             "Python",
             "Flask",
             "Celery"
+        ]
+    },
+    {
+        "name": "PostBoy",
+        "description": "An OpSec tool for server and website endpoint disovery",
+        "url": "https://github.com/ThatLinuxGuyYouKnow/postboy",
+        "repo": "https://github.com/ThatLinuxGuyYouKnow",
+        "tech": [
+            "Python"
         ]
     }
 ]
