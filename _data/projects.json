@@ -40,6 +40,7 @@
         "name": "PostBoy",
         "description": "An OpSec tool for server and website endpoint disovery",
         "url": "https://github.com/ThatLinuxGuyYouKnow/postboy",
+        "thumbnail": "project-postboy.webp",
         "repo": "https://github.com/ThatLinuxGuyYouKnow",
         "tech": [
             "Python"
