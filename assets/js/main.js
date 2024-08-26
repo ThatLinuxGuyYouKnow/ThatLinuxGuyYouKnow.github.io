@@ -6,6 +6,7 @@ const body = document.body;
 // init scrollmagic controller
 const scrollmagicController = new ScrollMagic.Controller();
 
+
 // cursor look and behavior
 const cursorPointer = body.appendChild(createElement('div'));
 const cursorRing = cursorPointer.appendChild(createElement('div'));
@@ -21,34 +22,19 @@ cursorRing.classList.add('cursor-ring');
 body.addEventListener('mousemove', (ev) => {
     cursor.x = ev.clientX;
     cursor.y = ev.clientY;
+
+    // Immediately update cursor position
+    cursorPointer.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+    cursorRing.style.transform = `translate(${cursor.ringX}px, ${cursor.ringY}px)`;
 });
 
-gsap.to({}, 0.010, {
-    repeat: -1,
-    onRepeat: () => {
-        cursor.ringX += (cursor.x - cursor.ringX) / 6;
-        cursor.ringY += (cursor.y - cursor.ringY) / 6;
-        gsap.set(cursorRing, {
-            css: {
-                left: cursor.ringX - 15,
-                top: cursor.ringY - 15
-            }
-        });
-        gsap.set(cursorPointer, {
-            css: {
-                left: cursor.x,
-                top: cursor.y
-            }
-        });
-    }
-});
+gsap.ticker.add(() => {
+    cursor.ringX += (cursor.x - cursor.ringX) / 6;
+    cursor.ringY += (cursor.y - cursor.ringY) / 6;
 
-selectAllElements('.cursor-animate').forEach((el) => {
-    el.addEventListener('mouseenter', () => {
-        cursorPointer.classList.add('hover');
-    });
-    el.addEventListener('mouseleave', () => {
-        cursorPointer.classList.remove('hover');
+    gsap.set(cursorRing, {
+        x: cursor.ringX - 15,
+        y: cursor.ringY - 15
     });
 });
 
