@@ -1,15 +1,11 @@
 .cursor {
     &-pointer {
-        display: none;
         position: fixed;
         user-select: none;
         pointer-events: none;
         font-weight: var(--fw-regular);
         z-index: var(--layer-4);
-
-        @include for-size(lg-up) {
-            display: block;
-        }
+        display: block; // Changed from none to block
 
         &::after {
             content: '•';
@@ -19,6 +15,7 @@
             font-size: 40px;
             color: var(--primary);
             transition: filter 0.20s ease-out;
+            filter: opacity(1); // Ensure full visibility
         }
 
         &.hover {
@@ -33,7 +30,6 @@
     }
 
     &-ring {
-        display: none;
         position: fixed;
         border-radius: 100%;
         width: 36px;
@@ -43,11 +39,8 @@
         z-index: var(--layer-4);
         transform: translate(0, 0);
         background-color: var(--primary);
-        filter: opacity(20%);
+        filter: opacity(0.2);
         transition: transform 0.60s cubic-bezier(0.75, -1.27, 0.30, 2.33);
-
-        @include for-size(lg-up) {
-            display: block;
-        }
+        display: block; // Changed from none to block
     }
 }
