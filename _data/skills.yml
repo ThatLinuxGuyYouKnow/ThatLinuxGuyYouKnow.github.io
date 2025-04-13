@@ -1,0 +1,15 @@
+#data/skill.yaml
+- name: Flutter
+- name: Python
+- name: HTML
+- name: Git
+- name: Node.js
+- name: Golang
+- name: Microsoft Power Automate
+- name: AI Integrations
+- name: Google API's
+- name: Supabase
+- name: Firebase
+- name: Google Cloud
+- name: WhatsApp Business API
+- name : Bubble.io
