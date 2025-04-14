@@ -1,9 +1,97 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabi Ayobami | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/img/logo.svg" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-{% include sections/about.html %}
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <h1>Hello there, my name is Alabi Ayobami.</h1>
+                <p>I'm a software engineer</p>
+                <p>I've been writing scripts and building apps since 2015 and have worked on many open source projects and gigs for companies and digital agencies.</p>
+                <p>Specializing in Cross Platform App development in Flutter and Automations with Python and Microsoft Power Automate</p>
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <ul class="skills-list">
+                        <li>Flutter</li>
+                        <li>Python</li>
+                        <li>HTML</li>
+                        <li>Git</li>
+                        <li>Node.js</li>
+                        <li>Golang</li>
+                        <li>Microsoft Power Automate</li>
+                        <li>AI Integrations</li>
+                        <li>Google APIs</li>
+                        <li>Supabase</li>
+                        <li>Firebase</li>
+                        <li>Google Cloud</li>
+                        <li>WhatsApp Business API</li>
+                        <li>Bubble.io</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="about-image">
+                <img src="assets/img/me.webp" alt="My photo">
+            </div>
+        </div>
+    </section>
 
-{% include sections/portfolio.html %}
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="assets/img/jemma.webp" alt="Project 1">
+                    <h3>Jemma</h3>
+                    <p>Coding assistant that lives in your terminal</p>
+                    <a href="https://github.com/ThatLinuxGuyYouKnow/jemma" target="_blank">View Project</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/img/gobin-preview.webp" alt="Project 2">
+                    <h3>GoBin</h3>
+                    <p>An AI powered waste disposal advisor.</p>
+                    <a href="https://github.com/ThatLinuxGuyYouKnow/gobin" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% include sections/contact.html %}
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Get in touch & connect with me</p>
+            <div class="contact-icons">
+                <a href="mailto:alabiyobamioluwamiseun@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ayobami-alabi-53b936247/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ThatLinuxGuyYouKnow" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://codepen.io/ThatLinuxGuyYouKnow" target="_blank"><i class="fab fa-codepen"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Alabi Ayobami</p>
+    </footer>
+</body>
+</html>
