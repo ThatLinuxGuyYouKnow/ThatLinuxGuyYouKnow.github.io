@@ -289,10 +289,51 @@
             background-color: var(--secondary-bg);
         }
 
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .category-tab {
+            padding: 10px 25px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 2px solid var(--card-bg);
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .category-tab:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .category-tab.active {
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+            border-color: var(--accent-color);
+        }
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
+        }
+
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item.hidden {
+            display: none;
         }
 
         .portfolio-item {
@@ -626,8 +667,9 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Hello, I'm <span>Alabi Ayobami</span></h1>
-I'm a software engineer specializing in cross-platform app development with Flutter, front end development, and automation
-                    solutions using Python and Machine Learning.
+                I'm a software engineer specializing in cross-platform app development with Flutter, front end
+                development, and automation
+                solutions using Python and Machine Learning.
                 <div class="hero-buttons">
                     <a href="#portfolio" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -681,9 +723,86 @@ I'm a software engineer specializing in cross-platform app development with Flut
             <div class="section-title">
                 <h2>My Projects</h2>
             </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Projects</button>
+                <button class="category-tab" data-category="ai-ml">AI/ML</button>
+                <button class="category-tab" data-category="fullstack">Fullstack</button>
+                <button class="category-tab" data-category="apps">Apps</button>
+            </div>
+
             <div class="portfolio-grid">
-                <!-- Project 1: Jemma -->
-                <div class="portfolio-item">
+                <!-- AI/ML PROJECTS -->
+
+                <!-- Bible Extractor -->
+                <div class="portfolio-item" data-category="ai-ml">
+                    <div class="portfolio-image">
+                        <img src="assets/bible-extractor.png" alt="Bible Extractor">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Bible Extractor</h3>
+                        <p>A finetuned Google T5 model for verse extraction from related contextual jargon</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">T5 Model</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/bible_extractor_v1" class="demo-link"
+                                target="_blank">View Project</a>
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/bible_extractor_v1" class="repo-link"
+                                target="_blank"><i class="fab fa-github"></i> Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MNIST Digit Classifier -->
+                <div class="portfolio-item" data-category="ai-ml">
+                    <div class="portfolio-image">
+                        <img src="assets/mnist.png" alt="MNIST Digit Classifier">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>MNIST Digit Classifier</h3>
+                        <p>A simple CNN for handwritten digit recognition, trained on the MNIST dataset</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/MNIST-Digit-Classifier" class="demo-link"
+                                target="_blank">View Project</a>
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/MNIST-Digit-Classifier" class="repo-link"
+                                target="_blank"><i class="fab fa-github"></i> Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flutter Image Classification -->
+                <div class="portfolio-item" data-category="ai-ml apps">
+                    <div class="portfolio-image">
+                        <img src="assets/flutter-ml.png" alt="Flutter Image Classification">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Flutter Image Classification</h3>
+                        <p>Uses the ONNX Runtime package to run a ShuffleNet model on the device's CPU</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">ONNX Runtime</span>
+                            <span class="tech-tag">ShuffleNet</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/Flutter-Image-Classification"
+                                class="demo-link" target="_blank">View Project</a>
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/Flutter-Image-Classification"
+                                class="repo-link" target="_blank"><i class="fab fa-github"></i> Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jemma -->
+                <div class="portfolio-item" data-category="ai-ml">
                     <div class="portfolio-image">
                         <img src="assets/jemma.jpeg" alt="Jemma">
                     </div>
@@ -704,8 +823,75 @@ I'm a software engineer specializing in cross-platform app development with Flut
                     </div>
                 </div>
 
-                <!-- Project 2: GoBin -->
-                <div class="portfolio-item">
+                <!-- Hummanize AI -->
+                <div class="portfolio-item" data-category="ai-ml fullstack">
+                    <div class="portfolio-image">
+                        <img src="https://hummanize-ai.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.ebc870bc.png&w=48&q=75"
+                            alt="Hummanize AI">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Hummanize AI</h3>
+                        <p>AI-powered tool for text summarization and content generation.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Text Summarization</span>
+                            <span class="tech-tag">Content Generation</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://hummanize-ai.vercel.app/" class="demo-link" target="_blank">Live Demo</a>
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/hummanize-ai" class="repo-link"
+                                target="_blank"><i class="fab fa-github"></i> Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FULLSTACK PROJECTS -->
+
+                <!-- Sping -->
+                <div class="portfolio-item" data-category="fullstack apps">
+                    <div class="portfolio-image">
+                        <img src="assets/sping.png" alt="Sping">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Sping</h3>
+                        <p>Free open source image format conversion tool, built with Flutter Web</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flutter Web</span>
+                            <span class="tech-tag">Image Processing</span>
+                            <span class="tech-tag">Open Source</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://sping.netlify.app" class="demo-link" target="_blank">Live Demo</a>
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/Sping" class="repo-link" target="_blank"><i
+                                    class="fab fa-github"></i> Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Whatsapp Automata -->
+                <div class="portfolio-item" data-category="fullstack">
+                    <div class="portfolio-image">
+                        <img src="assets/whatsapp.jpeg" alt="Whatsapp Automata">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Whatsapp Automata</h3>
+                        <p>A robust Selenium based Whatsapp Automation Agent.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Celery</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="demo-link disabled">Project Details</a>
+                            <a href="#" class="repo-link disabled"><i class="fab fa-github"></i> Private</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APPS PROJECTS -->
+
+                <!-- GoBin -->
+                <div class="portfolio-item" data-category="apps">
                     <div class="portfolio-image">
                         <img src="assets/gobin.png" alt="GoBin">
                     </div>
@@ -726,8 +912,8 @@ I'm a software engineer specializing in cross-platform app development with Flut
                     </div>
                 </div>
 
-                <!-- Project 3: Turbo Shark -->
-                <div class="portfolio-item">
+                <!-- TurboShark -->
+                <div class="portfolio-item" data-category="apps">
                     <div class="portfolio-image">
                         <img src="assets/turboshark.png" alt="TurboShark">
                     </div>
@@ -738,40 +924,18 @@ I'm a software engineer specializing in cross-platform app development with Flut
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">Isolates</span>
                             <span class="tech-tag">Threading</span>
-
                         </div>
                         <div class="portfolio-links">
                             <a href="https://github.com/ThatLinuxGuyYouKnow/turboshark" class="demo-link"
-                                target="_blank">Visit
-                                Site</a>
-                            <a href="https://github.com/ThatLinuxGuyYouKnow/thatlinuxguyyouknow.io" class="repo-link"
+                                target="_blank">Visit Site</a>
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/turboshark" class="repo-link"
                                 target="_blank"><i class="fab fa-github"></i> Repo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4: Whatsapp Automata -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/whatsapp.jpeg" alt="Whatsapp Automata">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Whatsapp Automata</h3>
-                        <p>A robust Selenium based Whatsapp Automation Agent.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Celery</span>
-                        </div>
-                        <div class="portfolio-links">
-                            <a href="#" class="demo-link disabled">Project Details</a>
-                            <a href="#" class="repo-link disabled"><i class="fab fa-github"></i> Private</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: PostBoy -->
-                <div class="portfolio-item">
+                <!-- PostBoy -->
+                <div class="portfolio-item" data-category="apps">
                     <div class="portfolio-image">
                         <img src="assets/postboy.jpeg" alt="PostBoy">
                     </div>
@@ -784,28 +948,7 @@ I'm a software engineer specializing in cross-platform app development with Flut
                         <div class="portfolio-links">
                             <a href="https://github.com/ThatLinuxGuyYouKnow/postboy" class="demo-link"
                                 target="_blank">View Project</a>
-                            <a href="https://github.com/ThatLinuxGuyYouKnow" class="repo-link" target="_blank"><i
-                                    class="fab fa-github"></i> Repo</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 6: Hummanize AI -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="https://hummanize-ai.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.ebc870bc.png&w=48&q=75"
-                            alt="Hummanize AI">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Hummanize AI</h3>
-                        <p>AI-powered tool for text summarization and content generation.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AI</span>
-                            <span class="tech-tag">Text Summarization</span>
-                            <span class="tech-tag">Content Generation</span>
-                        </div>
-                        <div class="portfolio-links">
-                            <a href="https://hummanize-ai.vercel.app/" class="demo-link" target="_blank">Live Demo</a>
-                            <a href="https://github.com/ThatLinuxGuyYouKnow/hummanize-ai" class="repo-link"
+                            <a href="https://github.com/ThatLinuxGuyYouKnow/postboy" class="repo-link"
                                 target="_blank"><i class="fab fa-github"></i> Repo</a>
                         </div>
                     </div>
@@ -867,36 +1010,36 @@ I'm a software engineer specializing in cross-platform app development with Flut
                 </div>
             </div>
     </section>
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-message">
-                    <p>Feel free to reach out for collaboration opportunities or just to say hello!</p>
-                </div>
-                <div class="contact-icons">
-                    <a href="mailto:alabiyobamioluwamiseun@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/ayobami-alabi-53b936247/" target="_blank" title="LinkedIn"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/ThatLinuxGuyYouKnow" target="_blank" title="GitHub"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://codepen.io/ThatLinuxGuyYouKnow" target="_blank" title="CodePen"><i
-                            class="fab fa-codepen"></i></a>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
+    <div class="section-title">
+        <h2>Get In Touch</h2>
+    </div>
+    <div class="contact-container">
+        <div class="contact-message">
+            <p>Feel free to reach out for collaboration opportunities or just to say hello!</p>
         </div>
+        <div class="contact-icons">
+            <a href="mailto:alabiyobamioluwamiseun@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/ayobami-alabi-53b936247/" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ThatLinuxGuyYouKnow" target="_blank" title="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://codepen.io/ThatLinuxGuyYouKnow" target="_blank" title="CodePen"><i
+                    class="fab fa-codepen"></i></a>
+        </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+    </div>
     </section>
 
     <footer>
@@ -946,6 +1089,34 @@ I'm a software engineer specializing in cross-platform app development with Flut
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+
+        // Category filtering
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                const category = tab.getAttribute('data-category');
+
+                portfolioItems.forEach(item => {
+                    if (category === 'all') {
+                        item.classList.remove('hidden');
+                    } else {
+                        const itemCategories = item.getAttribute('data-category').split(' ');
+                        if (itemCategories.includes(category)) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    }
+                });
             });
         });
 
